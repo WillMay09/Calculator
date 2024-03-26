@@ -55,8 +55,8 @@ background-color: aquamarine;
 display: flex;
 flex-wrap: wrap;
 flex-basis: 50%;
-justify-content: center;
-align-items: center;
+
+/* align-items: center; */
 
 
 
@@ -65,25 +65,28 @@ align-items: center;
 display: flex;
 flex-basis: 50%;
 flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+
 
 
 
 
 }
-.col-1-2 button{
-   width: 100px;
-   height: 100px;
+  .col-1-2 button{
+   
+   flex-grow: 1;
+   max-height: 200px;
+   max-width: 200px;
+   min-width: 100px;
     
+  }
     
-    
-    }
+   
 
 .col-3-4 button{
-   width: 100px;
-   height: 100px;
-    
+   flex-grow: 1;
+   max-height: 200px;
+   max-width: 200px;
+   min-width: 100px;
     
     
     
