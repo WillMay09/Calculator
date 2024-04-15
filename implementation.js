@@ -21,7 +21,14 @@ buttons.forEach( button=>{
     button.addEventListener('click',(event)=>{
 
        
-        if(checkNumber(button.textContent) && equation.operation ==''){
+        if(button.textContent === "clear"){
+        
+            clearButton();
+            console.table(equation);
+            screen.textContent = '';
+        
+        
+        }else if(checkNumber(button.textContent) && equation.operation ==''){
          equation.number1 += button.textContent; 
          screen.textContent += button.textContent;
 
@@ -71,6 +78,16 @@ function calculateEquation(){
         return (Number(equation.number1)*Number(equation.number2));
 
     }
+
+}
+
+function clearButton(){
+
+equation.number1 = '';
+equation.number2 = '';
+equation.operation = '';
+
+
 
 }
 
