@@ -32,10 +32,17 @@ buttons.forEach( button=>{
             //screen.textContent = '';
             
 
-        }else{
+        }else if(button.textContent === '=' && equation.operation != '' && equation.number1 != '' && equation.number2 != ''){
 
+            let answer = calculateEquation();
+            screen.textContent = '';
+            screen.textContent += answer;
+
+           
+        }else{
             equation.number2 += button.textContent;
             screen.textContent += button.textContent;
+
         }
 
         //console.table(equation);
@@ -44,6 +51,26 @@ buttons.forEach( button=>{
    
 })
 
+
+}
+
+function calculateEquation(){
+
+    if(equation.operation === '+'){
+        return (equation.number1 + equation.number2); 
+
+    }else if(equation.operation === '-'){
+        return (equation.number1 - equation.number2);
+
+    }else if(equation.operation === '/'){
+
+        return (equation.number1/equation.number2);
+
+    }else if(equation.operation === '*'){
+
+        return (equation.number1*equation.number2);
+
+    }
 
 }
 
@@ -66,7 +93,6 @@ case '*':
 
     return false;
 
-case '=':
 
 default:
 
