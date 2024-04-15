@@ -57,18 +57,18 @@ buttons.forEach( button=>{
 function calculateEquation(){
 
     if(equation.operation === '+'){
-        return (equation.number1 + equation.number2); 
+        return (Number(equation.number1) + Number(equation.number2)); 
 
     }else if(equation.operation === '-'){
-        return (equation.number1 - equation.number2);
+        return (Number(equation.number1) - Number(equation.number2));
 
     }else if(equation.operation === '/'){
 
-        return (equation.number1/equation.number2);
+        return (Number(equation.number1)/Number(equation.number2));
 
     }else if(equation.operation === '*'){
 
-        return (equation.number1*equation.number2);
+        return (Number(equation.number1)*Number(equation.number2));
 
     }
 
